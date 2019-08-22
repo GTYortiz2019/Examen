@@ -1,3 +1,7 @@
+ //*YulianChristofer Ortiz Morales 
+ //*5090-18-534
+//Examen programacion 2
+
 package ordenamiento;
 import java.util.Scanner;
 public class Ordenamiento {
