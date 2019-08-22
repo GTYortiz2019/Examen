@@ -8,28 +8,38 @@ public class Ordenamiento {
     
     public static void main(String[] args) {
         Scanner var=new Scanner(System.in);
-        int NO1,NO2,NO4,NO3,AUX1;
+        int NO1,NO2,NO4,NO3, AUX1;
         String CA1,CA2,CA3,CA4;
+        int [] n= new int[4];
+        String [] c= new String[4];
         
-        System.out.println("Ingrese Numero de Carnet 1: ");
-        CA1=var.nextLine();
-        System.out.println("Ingrese Nota 1: ");
+        for(int i=0;i<4;i++){
+         System.out.println("Ingrese Nota"+(i+1)+": ");
         NO1=var.nextInt();
-        System.out.println("Ingrese Numero de Carnet 2: ");
-        CA2=var.nextLine();
-        System.out.println("Ingrese Nota 2: ");
-        NO2=var.nextInt();
-        System.out.println("Ingrese Numero de Carnet 3: ");
-        CA3=var.nextLine();
-        System.out.println("Ingrese Nota 3: ");
-        NO3=var.nextInt();
-        System.out.println("Ingrese Numero de Carnet 4: ");
-        CA4=var.nextLine();
-        System.out.println("Ingrese Nota 4: ");
-        NO4=var.nextInt();
+        System.out.println("Ingrese Numero de Carnet"+(i+1)+": ");
+        var.nextLine();
+        CA1=var.nextLine();
+   n[i]=NO1;
+   c[i]=CA1;
+   }
+
+     
         
+        for(int i=0; i<(3);i++){
+     for (int j=0; j<(3);j++){       
+         if(n[j]>n[j+1]){
+              AUX1=n[j];
+              n[j]=n[j+1];
+              n[j+1]= AUX1;
+        }
+     }
+ }
         
+ for(int i=0;i<4;i++){
+    System.out.print("Nota: "+n[i]+"\n");
+     System.out.println("Carnet: "+c[i]);
+   }
         
-    }
+      }
     
 }
